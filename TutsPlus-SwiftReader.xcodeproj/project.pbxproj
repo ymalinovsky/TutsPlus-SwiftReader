@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9E4DAFA81D79BCD7008D46F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DAFA71D79BCD7008D46F5 /* AppDelegate.swift */; };
-		9E4DAFAA1D79BCD7008D46F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DAFA91D79BCD7008D46F5 /* ViewController.swift */; };
 		9E4DAFAD1D79BCD7008D46F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4DAFAB1D79BCD7008D46F5 /* Main.storyboard */; };
 		9E4DAFB01D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DAFAE1D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld */; };
 		9E4DAFB21D79BCD7008D46F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4DAFB11D79BCD7008D46F5 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		9E4DAFA41D79BCD7008D46F5 /* TutsPlus-SwiftReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TutsPlus-SwiftReader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4DAFA71D79BCD7008D46F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E4DAFA91D79BCD7008D46F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E4DAFAC1D79BCD7008D46F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E4DAFAF1D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TutsPlus_SwiftReader.xcdatamodel; sourceTree = "<group>"; };
 		9E4DAFB11D79BCD7008D46F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				9E4DAFA71D79BCD7008D46F5 /* AppDelegate.swift */,
-				9E4DAFA91D79BCD7008D46F5 /* ViewController.swift */,
 				9E4DAFAB1D79BCD7008D46F5 /* Main.storyboard */,
 				9E4DAFB11D79BCD7008D46F5 /* Assets.xcassets */,
 				9E4DAFB31D79BCD7008D46F5 /* LaunchScreen.storyboard */,
@@ -140,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E4DAFB01D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld in Sources */,
-				9E4DAFAA1D79BCD7008D46F5 /* ViewController.swift in Sources */,
 				9E4DAFA81D79BCD7008D46F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
