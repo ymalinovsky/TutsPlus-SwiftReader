@@ -40,7 +40,13 @@
                             <outlet property="delegate" destination="CFY-aw-jgI" id="w5Q-8X-we7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Feeds" id="E6q-Vn-vb6"/>
+                    <navigationItem key="navigationItem" title="Feeds" id="E6q-Vn-vb6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oNW-AR-6ch">
+                            <connections>
+                                <segue destination="lSM-WD-5iY" kind="show" identifier="test" id="ubF-rB-nUs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="day-Eb-uSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,4 +150,7 @@
             <point key="canvasLocation" x="-273" y="485"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ubF-rB-nUs"/>
+    </inferredMetricsTieBreakers>
 </document>
