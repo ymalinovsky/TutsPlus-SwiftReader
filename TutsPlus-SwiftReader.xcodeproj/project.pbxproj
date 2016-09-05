@@ -12,6 +12,9 @@
 		9E4DAFB01D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DAFAE1D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld */; };
 		9E4DAFB21D79BCD7008D46F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4DAFB11D79BCD7008D46F5 /* Assets.xcassets */; };
 		9E4DAFB51D79BCD7008D46F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4DAFB31D79BCD7008D46F5 /* LaunchScreen.storyboard */; };
+		9ED660B11D7DB1F4008A2D93 /* FeedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED660B01D7DB1F4008A2D93 /* FeedsTableViewController.swift */; };
+		9ED660B31D7DB37C008A2D93 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED660B21D7DB37C008A2D93 /* ArticlesTableViewController.swift */; };
+		9ED660B91D7DB55E008A2D93 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED660B81D7DB55E008A2D93 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		9E4DAFB11D79BCD7008D46F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E4DAFB41D79BCD7008D46F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E4DAFB61D79BCD7008D46F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ED660B01D7DB1F4008A2D93 /* FeedsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsTableViewController.swift; sourceTree = "<group>"; };
+		9ED660B21D7DB37C008A2D93 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
+		9ED660B81D7DB55E008A2D93 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				9E4DAFB31D79BCD7008D46F5 /* LaunchScreen.storyboard */,
 				9E4DAFB61D79BCD7008D46F5 /* Info.plist */,
 				9E4DAFAE1D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld */,
+				9ED660B01D7DB1F4008A2D93 /* FeedsTableViewController.swift */,
+				9ED660B21D7DB37C008A2D93 /* ArticlesTableViewController.swift */,
+				9ED660B81D7DB55E008A2D93 /* WebViewController.swift */,
 			);
 			path = "TutsPlus-SwiftReader";
 			sourceTree = "<group>";
@@ -137,6 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E4DAFB01D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld in Sources */,
+				9ED660B11D7DB1F4008A2D93 /* FeedsTableViewController.swift in Sources */,
+				9ED660B31D7DB37C008A2D93 /* ArticlesTableViewController.swift in Sources */,
+				9ED660B91D7DB55E008A2D93 /* WebViewController.swift in Sources */,
 				9E4DAFA81D79BCD7008D46F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +299,7 @@
 				9E4DAFBB1D79BCD7008D46F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

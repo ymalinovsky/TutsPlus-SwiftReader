@@ -8,7 +8,7 @@
         <!--Feeds-->
         <scene sceneID="MOr-UX-2iF">
             <objects>
-                <tableViewController id="CFY-aw-jgI" sceneMemberID="viewController">
+                <tableViewController id="CFY-aw-jgI" customClass="FeedsTableViewController" customModule="TutsPlus_SwiftReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5cx-EC-XBp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +50,7 @@
         <!--Articles-->
         <scene sceneID="2rs-BW-R05">
             <objects>
-                <tableViewController id="lSM-WD-5iY" sceneMemberID="viewController">
+                <tableViewController id="lSM-WD-5iY" customClass="ArticlesTableViewController" customModule="TutsPlus_SwiftReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Aj9-pC-kGv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
         <!--Title-->
         <scene sceneID="ZOQ-oh-8h4">
             <objects>
-                <viewController id="G0Q-kM-AuD" sceneMemberID="viewController">
+                <viewController id="G0Q-kM-AuD" customClass="WebViewController" customModule="TutsPlus_SwiftReader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9jd-HU-HsW"/>
                         <viewControllerLayoutGuide type="bottom" id="RXH-Bz-Xmr"/>
