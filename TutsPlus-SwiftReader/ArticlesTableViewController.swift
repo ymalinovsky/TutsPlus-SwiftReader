@@ -9,14 +9,10 @@
 import UIKit
 
 class ArticlesTableViewController: UITableViewController {
-
-    var testString: String = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        NSLog(testString)
-        
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
