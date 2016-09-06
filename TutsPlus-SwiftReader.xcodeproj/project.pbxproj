@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1EC8071D7EECD00050A74A /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8061D7EECD00050A74A /* FeedModel.swift */; };
+		9E1EC8091D7EEEAC0050A74A /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EC8081D7EEEAC0050A74A /* ArticleModel.swift */; };
 		9E4DAFA81D79BCD7008D46F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DAFA71D79BCD7008D46F5 /* AppDelegate.swift */; };
 		9E4DAFAD1D79BCD7008D46F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4DAFAB1D79BCD7008D46F5 /* Main.storyboard */; };
 		9E4DAFB01D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DAFAE1D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E1EC8061D7EECD00050A74A /* FeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		9E1EC8081D7EEEAC0050A74A /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		9E4DAFA41D79BCD7008D46F5 /* TutsPlus-SwiftReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TutsPlus-SwiftReader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4DAFA71D79BCD7008D46F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E4DAFAC1D79BCD7008D46F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				9ED660B01D7DB1F4008A2D93 /* FeedsTableViewController.swift */,
 				9ED660B21D7DB37C008A2D93 /* ArticlesTableViewController.swift */,
 				9ED660B81D7DB55E008A2D93 /* WebViewController.swift */,
+				9E1EC8061D7EECD00050A74A /* FeedModel.swift */,
+				9E1EC8081D7EEEAC0050A74A /* ArticleModel.swift */,
 			);
 			path = "TutsPlus-SwiftReader";
 			sourceTree = "<group>";
@@ -146,9 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E4DAFB01D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld in Sources */,
+				9E1EC8071D7EECD00050A74A /* FeedModel.swift in Sources */,
 				9ED660B11D7DB1F4008A2D93 /* FeedsTableViewController.swift in Sources */,
 				9ED660B31D7DB37C008A2D93 /* ArticlesTableViewController.swift in Sources */,
 				9ED660B91D7DB55E008A2D93 /* WebViewController.swift in Sources */,
+				9E1EC8091D7EEEAC0050A74A /* ArticleModel.swift in Sources */,
 				9E4DAFA81D79BCD7008D46F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
