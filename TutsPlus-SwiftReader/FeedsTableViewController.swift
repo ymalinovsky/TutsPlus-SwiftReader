@@ -8,10 +8,21 @@
 
 import UIKit
 
-class FeedsTableViewController: UITableViewController {
-
+class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
+    
+    var parser: NSXMLParser = NSXMLParser()
+    var feedURL: String = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        feedURL = "https://developer.apple.com/news/rss/news.rss"
+        let url: NSURL = NSURL(string: feedURL)!
+        
+        parser = NSXMLParser(contentsOfURL: url)!
+        parser.delegate = self
+        parser.parse()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
