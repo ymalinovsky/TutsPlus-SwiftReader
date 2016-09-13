@@ -11,24 +11,89 @@ import UIKit
 class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
     
     var parser: NSXMLParser = NSXMLParser()
-    var feedURL: String = String()
+    var feedUrl: String = String()
+    
+    var feedTitle: String = String()
+    var articleTitle: String = String()
+    var articleLink: String = String()
+    var articlePubDate: String = String()
+    var parsingChannel: Bool = false
+    var eName: String = String()
+    
+    var feeds: [FeedModel] = []
+    var articles: [ArticleModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        feedURL = "https://developer.apple.com/news/rss/news.rss"
-        let url: NSURL = NSURL(string: feedURL)!
+        feedUrl = "https://developer.apple.com/news/rss/news.rss";
+        let url: NSURL = NSURL(string: feedUrl)!
         
         parser = NSXMLParser(contentsOfURL: url)!
         parser.delegate = self
         parser.parse()
-        
+    
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        
+        eName = elementName;
+        if (elementName == "channel") {
+            feedTitle = String()
+            feedUrl = String()
+            parsingChannel = true
+        } else if (elementName == "item") {
+            articleTitle = String()
+            articleLink = String()
+            articlePubDate = String()
+            parsingChannel = false
+        }
+
+    }
+    
+    func parser(parser: NSXMLParser, foundCharacters string: String) {
+        
+        let data = string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        
+        if !data.isEmpty {
+            if parsingChannel {
+                if eName == "title" {
+                    feedTitle += data
+                }
+            } else {
+                if eName == "title" {
+                    articleTitle += data
+                } else if eName == "link" {
+                    articleLink += data
+                } else if eName == "pubData" {
+                    articlePubDate += data
+                }
+            }
+        }
+    }
+    
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        
+        if elementName == "channel" {
+            let feed: FeedModel = FeedModel()
+            feed.title = feedTitle
+            feed.url = feedUrl
+            feed.articles = articles
+            feeds.append(feed)
+        } else if elementName == "item" {
+            let article: ArticleModel = ArticleModel()
+            article.title = articleTitle
+            article.link = articleLink
+            article.pubData = articlePubDate
+            articles.append(article)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
