@@ -9,11 +9,20 @@
 import UIKit
 
 class WebViewController: UIViewController {
+    
+    var article: ArticleModel = ArticleModel()
 
+    @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        self.title = article.title
+        
+        let url: NSURL = NSURL(string: article.link)!
+        let request: NSURLRequest = NSURLRequest(URL: url)
+        webView.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
