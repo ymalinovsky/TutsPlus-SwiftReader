@@ -31,6 +31,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuC-xA-DQv">
                                 <rect key="frame" x="145" y="185" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <segue destination="6J4-m9-nGu" kind="unwind" unwindAction="retrieveNewFeed:" id="Nko-er-D7G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,6 +44,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zx-tj-19K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6J4-m9-nGu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="333" y="-233"/>
         </scene>

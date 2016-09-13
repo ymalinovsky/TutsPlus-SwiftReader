@@ -25,20 +25,27 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        feedUrl = "https://developer.apple.com/news/rss/news.rss";
-        let url: NSURL = NSURL(string: feedUrl)!
-        
-        parser = NSXMLParser(contentsOfURL: url)!
-        parser.delegate = self
-        parser.parse()
-    
 
+        addNewFeed("https://developer.apple.com/news/rss/news.rss")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func addNewFeed(url: String){
+        feedUrl = url;
+        let url: NSURL = NSURL(string: feedUrl)!
+        
+        parser = NSXMLParser(contentsOfURL: url)!
+        parser.delegate = self
+        parser.parse()
+    }
+    
+    @IBAction func retrieveNewFeed(segue: UIStoryboardSegue){
+        
     }
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
