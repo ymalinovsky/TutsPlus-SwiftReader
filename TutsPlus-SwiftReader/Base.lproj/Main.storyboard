@@ -5,6 +5,45 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Add Feed View Controller-->
+        <scene sceneID="cXN-pR-l54">
+            <objects>
+                <viewController id="m4l-0y-vtV" customClass="AddFeedViewController" customModule="TutsPlus_SwiftReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="isi-NG-Z4i"/>
+                        <viewControllerLayoutGuide type="bottom" id="ath-7x-Wsp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NQH-0v-HLw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXq-pt-kHh">
+                                <rect key="frame" x="123" y="67" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NwH-fn-bnN">
+                                <rect key="frame" x="20" y="125" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuC-xA-DQv">
+                                <rect key="frame" x="145" y="185" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="feedUrl" destination="NwH-fn-bnN" id="vkV-bd-Xsg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zx-tj-19K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="-233"/>
+        </scene>
         <!--Feeds-->
         <scene sceneID="MOr-UX-2iF">
             <objects>
@@ -41,7 +80,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Feeds" id="E6q-Vn-vb6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oNW-AR-6ch"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oNW-AR-6ch">
+                            <connections>
+                                <segue destination="m4l-0y-vtV" kind="popoverPresentation" popoverAnchorBarButtonItem="oNW-AR-6ch" id="dlI-1C-4oO">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
