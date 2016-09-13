@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "FeedsTableViewController.parser(NSXMLParser, foundCharacters : String) -&gt; ():FeedsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "eName">
+            </PersistentString>
+            <PersistentString
+               value = "articlePubDate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FeedsTableViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:FeedsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "feed.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

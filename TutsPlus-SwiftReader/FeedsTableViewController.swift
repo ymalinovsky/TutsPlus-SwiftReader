@@ -71,7 +71,7 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
                     articleTitle += data
                 } else if eName == "link" {
                     articleLink += data
-                } else if eName == "pubData" {
+                } else if eName == "pubDate" {
                     articlePubDate += data
                 }
             }
@@ -167,6 +167,13 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
+        if segue.identifier == "ShowArticles" {
+            let viewController: ArticlesTableViewController = segue.destinationViewController as! ArticlesTableViewController
+            let indexPath = self.tableView.indexPathForSelectedRow!
+            let feed = feeds[indexPath.row]
+            
+            viewController.articles = feed.articles
+        }
     }
 
 }

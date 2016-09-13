@@ -10,6 +10,8 @@ import UIKit
 
 class ArticlesTableViewController: UITableViewController {
     
+    var articles: [ArticleModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -29,23 +31,25 @@ class ArticlesTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return articles.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ArticleCell", forIndexPath: indexPath)
 
-        // Configure the cell...
-
+        let article: ArticleModel = articles[indexPath.row]
+        cell.textLabel!.text = article.title
+        cell.detailTextLabel!.text = article.pubData
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

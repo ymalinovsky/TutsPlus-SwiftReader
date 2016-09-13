@@ -31,7 +31,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="lSM-WD-5iY" kind="show" id="i9b-ed-p3M"/>
+                                    <segue destination="lSM-WD-5iY" kind="show" identifier="ShowArticles" id="i9b-ed-p3M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ynr-zr-2AW" detailTextLabel="s0Z-jo-Ot3" style="IBUITableViewCellStyleSubtitle" id="a9q-5g-gEG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" textLabel="ynr-zr-2AW" detailTextLabel="s0Z-jo-Ot3" style="IBUITableViewCellStyleSubtitle" id="a9q-5g-gEG">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a9q-5g-gEG" id="3aD-Am-Rwt">
