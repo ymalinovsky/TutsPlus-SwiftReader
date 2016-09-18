@@ -2,7 +2,7 @@
 //  AddFeedViewController.swift
 //  TutsPlus-SwiftReader
 //
-//  Created by Yan Malinovsky on 13.09.16.
+//  Created by Yan Malinovsky on 16.09.16.
 //  Copyright © 2016 Yan Malinovsky. All rights reserved.
 //
 
@@ -24,14 +24,15 @@ class AddFeedViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let feedsViewController = segue.destinationViewController as! FeedsTableViewController
+    
+        feedsViewController.addNewFeed(feedUrl.text!)
+        
     }
-    */
+ 
 
 }

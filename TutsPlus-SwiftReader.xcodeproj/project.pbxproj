@@ -14,10 +14,10 @@
 		9E4DAFB01D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DAFAE1D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld */; };
 		9E4DAFB21D79BCD7008D46F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4DAFB11D79BCD7008D46F5 /* Assets.xcassets */; };
 		9E4DAFB51D79BCD7008D46F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4DAFB31D79BCD7008D46F5 /* LaunchScreen.storyboard */; };
-		9E9666841D88526F0008213A /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9666831D88526F0008213A /* AddFeedViewController.swift */; };
 		9ED660B11D7DB1F4008A2D93 /* FeedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED660B01D7DB1F4008A2D93 /* FeedsTableViewController.swift */; };
 		9ED660B31D7DB37C008A2D93 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED660B21D7DB37C008A2D93 /* ArticlesTableViewController.swift */; };
 		9ED660B91D7DB55E008A2D93 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED660B81D7DB55E008A2D93 /* WebViewController.swift */; };
+		9EDB14641D8C5F5200680B4D /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB14631D8C5F5200680B4D /* AddFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		9E4DAFB11D79BCD7008D46F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E4DAFB41D79BCD7008D46F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E4DAFB61D79BCD7008D46F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E9666831D88526F0008213A /* AddFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		9ED660B01D7DB1F4008A2D93 /* FeedsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsTableViewController.swift; sourceTree = "<group>"; };
 		9ED660B21D7DB37C008A2D93 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		9ED660B81D7DB55E008A2D93 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		9EDB14631D8C5F5200680B4D /* AddFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				9ED660B81D7DB55E008A2D93 /* WebViewController.swift */,
 				9E1EC8061D7EECD00050A74A /* FeedModel.swift */,
 				9E1EC8081D7EEEAC0050A74A /* ArticleModel.swift */,
-				9E9666831D88526F0008213A /* AddFeedViewController.swift */,
+				9EDB14631D8C5F5200680B4D /* AddFeedViewController.swift */,
 			);
 			path = "TutsPlus-SwiftReader";
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 			files = (
 				9E4DAFB01D79BCD7008D46F5 /* TutsPlus_SwiftReader.xcdatamodeld in Sources */,
 				9E1EC8071D7EECD00050A74A /* FeedModel.swift in Sources */,
-				9E9666841D88526F0008213A /* AddFeedViewController.swift in Sources */,
+				9EDB14641D8C5F5200680B4D /* AddFeedViewController.swift in Sources */,
 				9ED660B11D7DB1F4008A2D93 /* FeedsTableViewController.swift in Sources */,
 				9ED660B31D7DB37C008A2D93 /* ArticlesTableViewController.swift in Sources */,
 				9ED660B91D7DB55E008A2D93 /* WebViewController.swift in Sources */,

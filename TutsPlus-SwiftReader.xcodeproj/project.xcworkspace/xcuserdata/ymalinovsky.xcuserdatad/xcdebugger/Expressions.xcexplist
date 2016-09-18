@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "FeedsTableViewController.addNewFeed(NSURL) -&gt; ():FeedsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "FeedsTableViewController.parser(NSXMLParser, foundCharacters : String) -&gt; ():FeedsTableViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -18,6 +26,30 @@
          <PersistentStrings>
             <PersistentString
                value = "feed.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FeedsTableViewController.retrieveNewFeed(UIStoryboardSegue) -&gt; ():FeedsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.destinationViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FeedsTableViewController.viewDidLoad() -&gt; ():FeedsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "feedUrls">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FeedsTableViewController.addNewFeed(String) -&gt; ():FeedsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "feedUrl">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

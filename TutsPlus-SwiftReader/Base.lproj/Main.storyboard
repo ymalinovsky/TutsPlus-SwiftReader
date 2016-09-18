@@ -32,7 +32,7 @@
                                 <rect key="frame" x="145" y="185" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <segue destination="6J4-m9-nGu" kind="unwind" unwindAction="retrieveNewFeed:" id="Nko-er-D7G"/>
+                                    <segue destination="6J4-m9-nGu" kind="unwind" unwindAction="retrieveNewFeed:" id="3uw-HZ-8kQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,7 +40,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="feedUrl" destination="NwH-fn-bnN" id="vkV-bd-Xsg"/>
+                        <outlet property="feedUrl" destination="NwH-fn-bnN" id="5dV-ed-gDv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zx-tj-19K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,20 +162,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xsa-NQ-upe">
-                                <rect key="frame" x="0.0" y="64" width="320" height="505"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-n4-ULf">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
-                                        <subviews>
-                                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBh-dg-Q5G">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
-                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                                            </webView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBh-dg-Q5G">
+                                <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
