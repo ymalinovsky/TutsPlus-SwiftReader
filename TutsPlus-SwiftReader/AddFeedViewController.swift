@@ -28,11 +28,11 @@ class AddFeedViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let feedsViewController = segue.destinationViewController as! FeedsTableViewController
-    
-        feedsViewController.addNewFeed(feedUrl.text!)
-        
+        if segue.identifier == "addFeedUnwind" {
+            let feedsViewController = segue.destinationViewController as! FeedsTableViewController
+            feedsViewController.addNewFeed(feedUrl.text!)
+            
+            feedsViewController.tableView.reloadData()
+        }
     }
- 
-
 }

@@ -26,7 +26,7 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addNewFeed("https://developer.apple.com/news/rss/news.rss")
+//        addNewFeed("https://developer.apple.com/news/rss/news.rss")
 //        addNewFeed("https://blog.xamarin.com/feed/")
         
         // Uncomment the following line to preserve selection between presentations
@@ -46,7 +46,7 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
     }
     
     @IBAction func retrieveNewFeed(segue: UIStoryboardSegue){
-
+        
     }
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {

@@ -3,21 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "FeedsTableViewController.addNewFeed(NSURL) -&gt; ():FeedsTableViewController.swift">
+         contextName = "FeedsTableViewController.viewDidLoad() -&gt; ():FeedsTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "url">
+               value = "feedUrls">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "FeedsTableViewController.parser(NSXMLParser, foundCharacters : String) -&gt; ():FeedsTableViewController.swift">
+         contextName = "FeedsTableViewController.addNewFeed(String) -&gt; ():FeedsTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "eName">
+               value = "feedUrl">
             </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FeedsTableViewController.addNewFeed(NSURL) -&gt; ():FeedsTableViewController.swift">
+         <PersistentStrings>
             <PersistentString
-               value = "articlePubDate">
+               value = "url">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -38,18 +43,67 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "FeedsTableViewController.viewDidLoad() -&gt; ():FeedsTableViewController.swift">
+         contextName = "FeedsTableViewController.parser(NSXMLParser, foundCharacters : String) -&gt; ():FeedsTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "feedUrls">
+               value = "parsingChannel">
+            </PersistentString>
+            <PersistentString
+               value = "eName">
+            </PersistentString>
+            <PersistentString
+               value = "feedTitle">
+            </PersistentString>
+            <PersistentString
+               value = "articleLink">
+            </PersistentString>
+            <PersistentString
+               value = "articleTitle">
+            </PersistentString>
+            <PersistentString
+               value = "articlePubDate">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "FeedsTableViewController.addNewFeed(String) -&gt; ():FeedsTableViewController.swift">
+         contextName = "AddFeedViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():AddFeedViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "feedUrl">
+               value = "segue.destinationViewController ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FeedsTableViewController.parser(NSXMLParser, didEndElement : String, namespaceURI : String?, qualifiedName : String?) -&gt; ():FeedsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "feedTitle">
+            </PersistentString>
+            <PersistentString
+               value = "articleTitle">
+            </PersistentString>
+            <PersistentString
+               value = "articleLink">
+            </PersistentString>
+            <PersistentString
+               value = "elementName">
+            </PersistentString>
+            <PersistentString
+               value = "feeds">
+            </PersistentString>
+            <PersistentString
+               value = "articlePubDate">
+            </PersistentString>
+            <PersistentString
+               value = "articles">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FeedsTableViewController.viewControllerForUnwindSegueAction(Selector, fromViewController : UIViewController, withSender : AnyObject?) -&gt; UIViewController?:FeedsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fromViewController.feedUrl">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
