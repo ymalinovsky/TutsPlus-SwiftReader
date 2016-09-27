@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
     
@@ -48,6 +49,115 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
     @IBAction func retrieveNewFeed(segue: UIStoryboardSegue){
         
     }
+    
+    func SaveFeed(feedModel: FeedModel) {
+        if(FeedExists(feedModel.url)) {
+            return
+        }
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("Feed", inManagedObjectContext: managedContext)
+        
+        let feed = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext) as! Feed
+        
+        feed.title = feedModel.title
+        feed.url = feedModel.url
+        
+        var articles: NSMutableSet = NSMutableSet()
+        
+        for articleModel in feedModel.articles {
+            let entity = NSEntityDescription.entityForName("Article", inManagedObjectContext: managedContext)
+            
+            let article = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext) as! Article
+            article.title = articleModel.title
+            article.link = articleModel.link
+            article.pubData = articleModel.pubData
+            
+            articles.addObject(article)
+        }
+        
+        feed.articles = articles
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            print("Appeared unpredictable error")
+        }
+
+        feeds.append(feedModel)
+        
+    }
+    
+    func FeedExists(url: String) -> Bool  {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: "Feed")
+        let predicate = NSPredicate(format: "url == %@", url)
+        
+        fetchRequest.predicate = predicate
+        
+        do {
+            let fetchResults = try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+            
+            if fetchResults.count > 0 {
+                return true
+            }
+            
+        } catch let error as NSError {
+            print("Error: \(error)")
+        } catch {
+            print("Appeared unpredictable error")
+        }
+
+        return false
+    }
+    
+    func GetFeeds() -> [FeedModel] {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: "Feed")
+        
+        var feedModels: [FeedModel] = [FeedModel]()
+        
+        do {
+            let fetchResults = try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+            
+            for feed in fetchResults as! [Feed] {
+                var feedModel = FeedModel()
+                feedModel.title = feed.title!
+                feedModel.url = feed.url!
+
+                var articleModels: [ArticleModel] = [ArticleModel]()
+                for article in feed.articles! {
+                    var articleModel = ArticleModel()
+                    articleModel.title = article.title
+                    articleModel.link = article.link
+                    articleModel.pubData = article.pubData
+
+                    articleModels.append(articleModel)
+                }
+
+                feedModel.articles = articleModels
+
+                feedModels.append(feedModel)
+            }
+            
+            
+        } catch let error as NSError {
+            print("Error: \(error)")
+        } catch {
+            print("Appeared unpredictable error")
+        }
+        
+        return feedModels
+    }
+
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         

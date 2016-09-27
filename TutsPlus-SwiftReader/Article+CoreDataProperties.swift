@@ -16,6 +16,6 @@ extension Article {
 
     @NSManaged var title: String?
     @NSManaged var link: String?
-    @NSManaged var pubDate: String?
+    @NSManaged var pubData: String?
 
 }
