@@ -89,7 +89,6 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
         }
 
         feeds.append(feedModel)
-        
     }
     
     func FeedExists(url: String) -> Bool  {
@@ -164,7 +163,6 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
         eName = elementName;
         if (elementName == "channel") {
             feedTitle = String()
-            feedUrl = String()
             articles = []
             parsingChannel = true
         } else if (elementName == "item") {
@@ -204,7 +202,10 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
             feed.title = feedTitle
             feed.url = feedUrl
             feed.articles = articles
-            feeds.append(feed)
+            
+//            feeds.append(feed)
+            SaveFeed(feed)
+            
         } else if elementName == "item" {
             let article: ArticleModel = ArticleModel()
             article.title = articleTitle
