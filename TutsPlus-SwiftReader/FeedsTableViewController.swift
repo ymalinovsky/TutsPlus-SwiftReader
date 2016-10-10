@@ -39,6 +39,18 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let feedModel = feeds[indexPath.row]
+        
+        DeleteFeed(feedModel.url)
+        
+        feeds.removeAtIndex(indexPath.row)
+        
+        tableView.reloadData()
+        
+    }
+    
     func addNewFeed(new_url: String){
         feedUrl = new_url;
         let url: NSURL = NSURL(string: feedUrl)!
@@ -49,6 +61,37 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
     }
     
     @IBAction func retrieveNewFeed(segue: UIStoryboardSegue){
+        
+    }
+    
+    func DeleteFeed(url: String) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: "Feed")
+        let predicate = NSPredicate(format: "url == %@", url)
+        
+        fetchRequest.predicate = predicate
+
+        do {
+            let fetchResults = try managedContext.executeFetchRequest(fetchRequest) as! [Feed]
+            if(fetchResults.count == 1) {
+                let feed = fetchResults.first!
+
+                managedContext.deleteObject(feed)
+
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    print("Could not save \(error), \(error.userInfo)")
+                } catch {
+                    print("Appeared unpredictable error")
+                }
+
+            }
+        } catch {
+            print("Appeared unpredictable error")
+        }
         
     }
     
