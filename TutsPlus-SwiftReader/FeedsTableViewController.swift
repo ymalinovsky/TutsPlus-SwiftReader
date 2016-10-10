@@ -30,6 +30,8 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
 //        addNewFeed("https://developer.apple.com/news/rss/news.rss")
 //        addNewFeed("https://blog.xamarin.com/feed/")
         
+        feeds = GetFeeds()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -65,7 +67,7 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
         feed.title = feedModel.title
         feed.url = feedModel.url
         
-        var articles: NSMutableSet = NSMutableSet()
+        let articles: NSMutableSet = NSMutableSet()
         
         for articleModel in feedModel.articles {
             let entity = NSEntityDescription.entityForName("Article", inManagedObjectContext: managedContext)
@@ -128,13 +130,13 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
             let fetchResults = try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
             
             for feed in fetchResults as! [Feed] {
-                var feedModel = FeedModel()
+                let feedModel = FeedModel()
                 feedModel.title = feed.title!
                 feedModel.url = feed.url!
 
                 var articleModels: [ArticleModel] = [ArticleModel]()
                 for article in feed.articles! {
-                    var articleModel = ArticleModel()
+                    let articleModel = ArticleModel()
                     articleModel.title = article.title
                     articleModel.link = article.link
                     articleModel.pubData = article.pubData
