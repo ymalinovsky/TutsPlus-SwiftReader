@@ -30,6 +30,11 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
 //        addNewFeed("https://developer.apple.com/news/rss/news.rss")
 //        addNewFeed("https://blog.xamarin.com/feed/")
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(FeedsTableViewController.RefreshFeeds), forControlEvents: .ValueChanged)
+        
+        self.refreshControl = refreshControl
+        
         feeds = GetFeeds()
         
         // Uncomment the following line to preserve selection between presentations
@@ -37,6 +42,24 @@ class FeedsTableViewController: UITableViewController, NSXMLParserDelegate {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func RefreshFeeds() {
+        for feed in feeds {
+            DeleteFeed(feed.url)
+        }
+        
+        let oldFeeds = feeds;
+        
+        feeds = []
+        
+        for oldFeed in oldFeeds {
+            addNewFeed(oldFeed.url)
+        }
+        
+        tableView.reloadData()
+        
+        refreshControl!.endRefreshing()
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
