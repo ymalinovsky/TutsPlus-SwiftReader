@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Add Feed View Controller-->
+        <!--Title-->
         <scene sceneID="cXN-pR-l54">
             <objects>
                 <viewController id="m4l-0y-vtV" customClass="AddFeedViewController" customModule="TutsPlus_SwiftReader" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,9 +50,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdm-Jz-cfD">
+                                <rect key="frame" x="5" y="20" width="46" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="6J4-m9-nGu" kind="unwind" unwindAction="retrieveNewFeed:" id="fPq-oQ-Xzf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Gwb-mc-vUS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="feedUrl" destination="NwH-fn-bnN" id="5dV-ed-gDv"/>
@@ -61,7 +69,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zx-tj-19K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6J4-m9-nGu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="333" y="-233"/>
+            <point key="canvasLocation" x="341" y="-221"/>
         </scene>
         <!--Feeds-->
         <scene sceneID="MOr-UX-2iF">
