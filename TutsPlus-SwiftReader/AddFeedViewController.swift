@@ -14,9 +14,13 @@ class AddFeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        exampleLable.enabled = false
+        
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet var exampleLable: UITextField!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
