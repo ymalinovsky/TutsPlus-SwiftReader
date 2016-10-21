@@ -39,21 +39,6 @@
                                     <segue destination="6J4-m9-nGu" kind="unwind" identifier="addFeedUnwind" unwindAction="retrieveNewFeed:" id="3uw-HZ-8kQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://developer.apple.com/news/rss/news.rss" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FFJ-mG-oTP">
-                                <frame key="frameInset" minY="217" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="exampleLabel" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Examples: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJY-et-GLK">
-                                <frame key="frameInset" minX="118" minY="179" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="exampleLable:" destination="m4l-0y-vtV" eventType="primaryActionTriggered" id="adW-hN-zdz"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdm-Jz-cfD">
                                 <frame key="frameInset" minX="20" minY="28" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,25 +47,42 @@
                                     <segue destination="6J4-m9-nGu" kind="unwind" unwindAction="retrieveNewFeed:" id="fPq-oQ-Xzf"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://blog.xamarin.com/feed/" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="to1-RH-AKn">
-                                <frame key="frameInset" minY="255" width="320" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="https://developer.apple.com/news/rss/news.rss" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jx0-8J-MPM">
+                                <frame key="frameInset" minX="10" minY="215" width="300" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="https://blog.xamarin.com/feed/" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cNp-0w-AFQ">
+                                <frame key="frameInset" minX="54" minY="255" width="212" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="RSS Examples: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ctV-qX-Cqw">
+                                <frame key="frameInset" minX="107" minY="174" width="107" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Gwb-mc-vUS"/>
                     <connections>
-                        <outlet property="exampleLable" destination="nJY-et-GLK" id="JjR-IA-pHg"/>
+                        <outlet property="appleDeveloperRss" destination="Jx0-8J-MPM" id="ITH-cv-RKw"/>
+                        <outlet property="exampleLable" destination="ctV-qX-Cqw" id="dcv-Eo-nQY"/>
                         <outlet property="feedUrl" destination="NwH-fn-bnN" id="5dV-ed-gDv"/>
+                        <outlet property="xamarinBlogRss" destination="cNp-0w-AFQ" id="SA0-aa-e9R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zx-tj-19K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6J4-m9-nGu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="341" y="-221"/>
+            <point key="canvasLocation" x="339.375" y="-221.83098591549296"/>
         </scene>
         <!--Feeds-->
         <scene sceneID="MOr-UX-2iF">

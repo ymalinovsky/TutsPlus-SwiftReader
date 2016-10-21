@@ -15,12 +15,23 @@ class AddFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exampleLable.enabled = false
+        exampleLable.editable = false;
+        exampleLable.selectable = true;
         
+        appleDeveloperRss.editable = false;
+        appleDeveloperRss.selectable = true;
+        
+        xamarinBlogRss.editable = false;
+        xamarinBlogRss.selectable = true;
+
         // Do any additional setup after loading the view.
     }
+
+    @IBOutlet var exampleLable: UITextView!
     
-    @IBOutlet var exampleLable: UITextField!
+    @IBOutlet var appleDeveloperRss: UITextView!
+    
+    @IBOutlet var xamarinBlogRss: UITextView!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
